@@ -48,8 +48,10 @@ Esse passo serve para baixar o projeto do GitHub para o seu computador.
 
 Abra o Prompt de Comando (Windows) ou o Terminal (Mac/Linux) e execute:
 ```bash
-git clone https://github.com/nataliaguarnieri/portfolio-ia-projects/proj_1_AI_Coder.git
-cd proj_1_AI_Coder
+git clone https://github.com/nataliaguarnieri/portfolio-ia-projects.git
+```
+```bash
+cd portfolio-ia-projects/proj_1_AI_Coder
 ```
 
 📁 Isso vai criar uma pasta chamada proj_1_AI_Coder e entrar nela.
