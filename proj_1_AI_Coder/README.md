@@ -39,17 +39,34 @@ Ele utiliza a **Groq API** para acessar modelos de linguagem avançados (como `o
 ---
 
 ## 📦 Instalação e Execução
+A seguir está o guia completo para rodar o Nati | AI Coder na sua máquina, mesmo que você nunca tenha usado Python ou Streamlit antes.
 
 ### 1️⃣ Clone este repositório
+Esse passo serve para baixar o projeto do GitHub para o seu computador.
+
+💡 “Clonar” significa criar uma cópia local do projeto, onde você poderá abrir e rodar os arquivos.
+
+Abra o Prompt de Comando (Windows) ou o Terminal (Mac/Linux) e execute:
 ```bash
 git clone https://github.com/nataliaguarnieri/portfolio-ia-projects/proj_1_AI_Coder.git
 cd proj_1_AI_Coder
 ```
 
+📁 Isso vai criar uma pasta chamada proj_1_AI_Coder e entrar nela.
+
+Se você não tiver o Git instalado, baixe em:
+👉 https://git-scm.com/downloads
+
 ### 2️⃣ Crie e ative um ambiente virtual
+O ambiente virtual é um espaço isolado do Python, usado para instalar as dependências do projeto sem interferir em outros programas do seu computador.
+
+No terminal, digite:
 ```bash
 python -m venv venv
 ```
+Isso cria uma pasta chamada venv com tudo que o Python precisa para o projeto.
+
+Agora, ative o ambiente virtual:
 * **Windows:**
 ```bash
 venv\Scripts\activate
@@ -58,33 +75,47 @@ venv\Scripts\activate
 ```bash
 source venv/bin/activate
 ```
+💡 Quando ativado, você verá algo como (venv) aparecendo antes do cursor no terminal — isso indica que o ambiente virtual está ativo.
 
 ### 3️⃣ Instale as dependências
+As dependências são as bibliotecas que o projeto precisa para funcionar (como Streamlit, Groq, etc.).
+
+Com o ambiente virtual ativo, rode:
 ```bash
 pip install -r requirements.txt
 ```
+Esse comando lê o arquivo requirements.txt e instala automaticamente todas as bibliotecas necessárias.
+Isso pode levar alguns minutos.
 
 ---
 
 ## 🔑 Configurando sua API Key da Groq
 
-Para utilizar a IA, você precisa gerar sua própria chave de API gratuita no site da **Groq**:
+A API Key é a sua chave pessoal de acesso à IA usada no projeto.
+Ela permite que o app se comunique com o modelo de linguagem hospedado na Groq.
 
-👉 [https://console.groq.com/keys](https://console.groq.com/keys)
+Para gerar a sua chave:
 
-1. Crie uma conta gratuita;  
-2. Gere uma nova **API Key**;  
-3. Copie a chave e insira no campo lateral do app (“Insira sua API Key Groq”).  
+1. Acesse 👉 [https://console.groq.com/keys](https://console.groq.com/keys)
+2. Crie uma conta gratuita (caso ainda não tenha);
+3. Clique em “Create API Key”;  
+4. Copie o código gerado (algo como gsk_12345abc...).
 
-⚠️ **Importante:**  
-Cada pessoa deve usar **sua própria chave**.  
-Nunca compartilhe sua **API Key** publicamente ou a inclua no código-fonte.
+🔐 **Onde inserir a chave:**
+* Quando abrir o app, haverá um campo na barra lateral escrito “Insira sua API Key Groq”.
+* Cole sua chave lá e clique em Enviar.
+
+⚠️ **Importante:**
+* Essa chave é pessoal — não compartilhe publicamente nem salve no código.
+* Se você perder ou suspeitar de uso indevido, gere uma nova no painel da Groq.
 
 ---
 
 ## ▶️ Executando o Projeto
 
-Com tudo configurado, basta executar o comando:
+Agora vem a parte divertida: rodar o assistente!
+
+No terminal (com o ambiente ainda ativo), digite:
 ```bash
 streamlit run assistente.py
 ```
